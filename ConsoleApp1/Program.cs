@@ -10,14 +10,15 @@ namespace CodeSampleMenu
             string name = "";
             string surname = "";
             int age = 0;
+            int height = 0;
             while (response != -1)
             {
                 Console.WriteLine(@"Enter 0 to enter name
                                     Enter 1 to enter surname
                                     Enter 2 to enter age
-                                    Enter 3 to print your application
-                                    Enter -1 to exit");
-
+                                    Enter -1 to exit
+                                    Enter 3 to enter weight
+                                    Enter -2 to print your application");
                 response = int.Parse(Console.ReadLine());
                 switch (response)
                 {
@@ -38,9 +39,15 @@ namespace CodeSampleMenu
                         }
                     case 3:
                         {
+                            height = int.Parse(Console.ReadLine());
+                            break;
+                        }
+                    case -2:
+                        {
                             Console.WriteLine(name);
                             Console.WriteLine(surname);
                             Console.WriteLine(age);
+                            Console.WriteLine(height);
                             break;
                         }
                     case -1:
